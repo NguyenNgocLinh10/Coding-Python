@@ -1,0 +1,25 @@
+def greatestCommonPrimeDivisor(a,b):
+    prime = []
+    both = []
+    for i in range(1, b + 1):
+        if a % i == 0 and b % i == 0:
+            both.append(i)
+    for i in both:
+        y = 0
+        for x in range(1, int(i)+1):
+            if int(i) % x == 0:
+                y += 1
+    if y == 2:
+        prime.append(i)
+        y = 0
+    else:
+        y = 0
+    if len(prime) == 0:
+        ans = -1
+    else:
+        ans = max(prime)
+    return ans
+
+a = int(input("Nhập a: "))
+b = int(input("Nhập b: "))
+print (greatestCommonPrimeDivisor(int(a),int(b)))

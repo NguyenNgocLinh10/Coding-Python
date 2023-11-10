@@ -24,6 +24,7 @@ def greatestCommonPrimeDivisor(a,b):
         ans = -1
     return ans
 
-b = int(input("Nhập b: "))
 a = int(input("Nhập a: "))
+b = int(input("Nhập b: "))
+
 print(greatestCommonPrimeDivisor(a,b))
